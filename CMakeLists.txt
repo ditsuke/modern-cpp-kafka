@@ -44,7 +44,7 @@ if (NOT BUILD_OPTION_DOC_ONLY)
     else ()
         find_file(LIBRDKAFKA_HEADER
              NAMES rdkafka.h
-             HINTS /usr/include/librdkafka /usr/local/include/librdkafka /opt/homebrew/include/librdkafka)
+             HINTS /usr/include/librdkafka /usr/local/include/librdkafka /opt/homebrew/include/librdkafka ENV{C_INCLUDE_PATH})
 
         cmake_path(GET LIBRDKAFKA_HEADER PARENT_PATH LIBRDKAFKA_INCLUDE_DIR)
         cmake_path(GET LIBRDKAFKA_INCLUDE_DIR PARENT_PATH LIBRDKAFKA_INCLUDE_DIR)
